@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("cover.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/*SSCROLL BAR CSS */
+html{
+    scroll-behavior: smooth;
+  }
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #2d323f;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #414755;
+    width: 50px;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/*HEADER CSS */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 100000;
+}
+header.sticky{
+    padding:5px 100px;
+    background-color: #fff;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 3px;
+    transition: 0.6s;
+}
+header .logo span{
+    background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(0, 225, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 1000;
+    position: relative;
+    text-decoration: none;
+    letter-spacing: 3px;
+
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+    transition: 1s;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    transition: 1s;
+    font-weight: 700;
+}
+header.sticky .logo{
+    color: rgb(45, 76, 104);
+}
+header.sticky .logo span{
+    background-image: linear-gradient(to top, rgb(17, 68, 179), rgb(0, 225, 255));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+header.sticky ul li a{
+    color: rgb(45, 76, 104);
+    font-weight: 700;
+}
+
+header ul li:hover{
+    color: aqua;
+    transform: scale(1.2);
+}
+header ul li a:hover {
+    color: aqua;
+}
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    transition: width 0.3s ease;
+}
+header ul li a:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/*CONTACT CSS */
+
+main{
+    margin-top: 250px;
+}
+main h3{
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 80px;
+    font-style: italic;
+    animation: scaleUp 0.6s ease-out;
+}
+
+main h5{
+    text-align: center;
+    color: white;
+    margin: 10px auto;
+    font-size: 20px;
+    width: 50%;
+    line-height: 1.7;
+    animation: scaleUp .6s ease-out;
+}
+main h6{
+    text-align: center;
+    color: white;
+    margin: 10px auto;
+    font-size: 25px;
+    font-weight: 200;
+    width: 50%;
+    line-height: 1.7;
+    padding-left: 50px;
+    animation: scaleUp .6s ease-out;
+}
+
+.box{
+    text-align: center;
+    margin-top: 50px;
+}
+.con-button{
+    font-size: 1em;
+    padding: 15px 35px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background: #405a69;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin-top: 90px;
+    color: #e9feff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+/* ------------------------------------------------------------------------------------------------ */
+/*The Pop up :3*/
+
+.con_overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.con_overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+
+.wrapper{
+    margin: 70px;
+    padding: 20px;
+    background: #ecfdff;
+    border-radius: 10px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.wrapper h2{
+    margin-top: 0;
+    color: #333;
+}
+
+.wrapper .close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+.wrapper .con_content{
+    max-height: 30%;
+    overflow: auto;
+}
+
+.con_container{
+    border-radius: 5px;
+    background: #ecfdff;
+    padding: 20px 0;
+}
+
+form label{
+    text-transform: uppercase ;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+input[type=text],input[type=email], textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type="submit"]{
+    background-color: #405a69;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/*Keyframes stuff*/
+
+@keyframes scaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/*Footer Stuff*/
+
+.footer {
+    background-color: #2d323f;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;   
+    gap: 25px;
+}
+
+.social-icon {
+    color: #fff;             
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px; 
+    transition: color 0.6s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: aqua;
+    transform: scale(1.5);
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/*media stuff*/
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 40px;
+    }
+    header .logo {
+        font-size: 1.8em;
+    }
+    header ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    header ul li a {
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+    main h3 {
+        font-size: 50px;
+    }
+    main h5 {
+        font-size: 18px;
+        width: 70%;
+    }
+    main h6 {
+        font-size: 20px;
+        width: 70%;
+        padding-left: 0;
+    }
+    .box {
+        margin-top: 30px;
+    }
+    .con-button {
+        font-size: 1.2em;
+        padding: 12px 30px;
+        margin-top: 50px;
+    }
+    .wrapper {
+        width: 80%;
+    }
+    .con_overlay {
+        padding: 10px;
+    }
+    input[type="text"],input[type="email"], textarea {
+        font-size: 14px;
+    }
+    input[type="submit"] {
+        font-size: 14px;
+    }
+    .footer-content {
+        padding: 20px;  
+    }
+
+    .social-links {
+        flex-direction: column;  
+        gap: 10px;                
+    }
+
+    .social-icon {
+        font-size: 25px; 
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        padding: 40px 100px;
+    }
+    header .logo {
+        font-size: 2.5em;
+    }
+    header ul li a {
+        font-size: 1.2em;
+    }
+    main h3 {
+        font-size: 80px;
+    }
+    main h5 {
+        font-size: 20px;
+        width: 50%;
+    }
+    main h6 {
+        font-size: 25px;
+        width: 50%;
+    }
+    .box {
+        margin-top: 50px;
+    }
+    .wrapper {
+        width: 30%;
+    }
+}

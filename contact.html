@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewpoint" content="width-device-width", initial-scale="1.0">
+    <link rel="stylesheet" href="con_styles.css"> 
+    <head>
+        <title> Travel Blog Website </title>
+    </head>
+
+    <body>
+        
+        
+<!----------------------------------------------------------------> 
+<!-- HEADER CONTENT--> 
+        <header>
+            <a href="index.html" class="logo"> INTELLI<span>WAVES</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+<!----------------------------------------------------------------> 
+<!-- MAIN CONTENT--> 
+        <main>
+            <h3>INTELLI<span>WAVES</span></h3>
+            <h5> "With IntelliWaves, you travel with sharpness and knowledge!"</h5>
+            <h6> If you have further questions, do not hesitate to get in touch! We are happy to assist you with any inquiries you may have! IntelliWaves is always looking forward to hear from you! </h6>
+            <div class="box">
+                <a href="#divOne" class="con-button"> Contact Us </a>
+            </div>
+
+<!----------------------------------------------------------------> 
+<!-- POP UP CONTENT--> 
+            <div class="con_overlay" id="divOne">
+                <div class="wrapper">
+                    <h2> Kindly Fill Out</h2>
+                    <a href="#" class="close">&times;</a>
+                    <div class="con_content">
+                        <div class="con_container">
+                            <div id="error"></div>
+                            <form method = "post" action = "#">
+                                <label> Name </label>
+                                <input type="text" id ="name" placeholder="Full Name" required>
+                                <label> Email Address </label>
+                                <input type="email" id ="email" placeholder="Email" required>
+                                <label> Message </label>
+                                <textarea id ="mes" placeholder="Enter your message here..." required></textarea>
+                                <input type ="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+<!----------------------------------------------------------------> 
+<!-- FOOTER CONTENT--> 
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; IntelliWaves. For educational purposes only.</p>
+                <div class="social-links">
+                    <a href="#"  class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"  class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"  class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+
+<!----------------------------------------------------------------> 
+<!-- JAVASCRIPT CONTENT--> 
+        <section class="banner">
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+        </section>
+
+    </body>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width-device-width", initial-scale="1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="js.js" type="text/Javascript">
+    <link rel="stylesheet" href="styles.css"> 
+    <head>
+        <title> Travel Blog Website </title>
+    </head>
+
+    <body>
+<!----------------------------------------------------------------> 
+<!-- HEADER --> 
+        <header>
+            <a href="index.html" class="logo"> INTELLI<span>WAVES</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+
+<!----------------------------------------------------------------> 
+<!-- MAIN CONTENT--> 
+        <main>
+            <div class="container">
+                <div class="slide">
+
+                    <div class="item" style="background-image: url(boracay.jpg);">
+                       <div class="content">
+                            <div class="name">BORACAY ISLAND</div>
+                            <div class="des">A tropical paradise with white sand, clear waters, and a lively atmosphere. Click to learn more. </div>
+                            <button onclick="togglePopup(1)"> Read More</button>
+                       </div>
+                    </div>
+                    <div class="item" style="background-image: url(maldives.jpg);">
+                        <div class="content">
+                             <div class="name">VARRAKU BEACH </div>
+                             <div class="des"> A secluded Maldives beach with white sand, clear waters, and vibrant coral reefs for snorkeling. Click to learn more.</div>
+                             <button onclick="togglePopup(2)"> Read More</button>
+                        </div>
+                     </div>
+                     <div class="item" style="background-image: url(indonesia.jpg);">
+                        <div class="content">
+                             <div class="name">PANTAI MERAH </div>
+                             <div class="des"> A peaceful beach in Indonesia with unique reddish-pink sand and clear, calm waters. Click to learn more.</div>
+                             <button onclick="togglePopup(3)"> Read More</button>
+                        </div>
+                     </div>
+                     <div class="item" style="background-image: url(australia.jpg);">
+                        <div class="content">
+                             <div class="name">WHITEHAVEN BEACH</div>
+                             <div class="des">A stunning beach in the Whitsundays known for its white silica sand and turquoise waters. Click to learn more.</div>
+                             <button onclick="togglePopup(4)"> Read More</button>
+                        </div>
+                     </div>
+                     <div class="item" style="background-image: url(hawaii.jpg);">
+                        <div class="content">
+                             <div class="name">WAIKIKI BEACH</div>
+                             <div class="des">An iconic Hawaiian beach famous for golden sand, clear waters, and great surfing. Click to learn more.</div>
+                             <button onclick="togglePopup(5)"> Read More</button>
+                        </div>
+                     </div>
+                    
+                </div>
+
+                <div class="button">
+                    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+
+
+        </main>
+
+<!----------------------------------------------------------------> 
+<!-- POPUP CONTENT: READ MORE --> 
+        <section>
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="pop-content">
+                <div class="close-btn" onclick="togglePopup(1)">&times;</div>
+                <h1> BORACAY, PHILIPPINES </h1>
+                <p> Boracay is the perfect definition of a tropical paradise! It offers stunning white sand beaches, crystal-clear waters, and a lively, energetic vibe. The famous White Beach is lined with palm trees and buzzing with activity, from beach bars to water sports like kite surfing and parasailing. Without the bustling activities, Boracay also houses plenty of peaceful corners, like the more tranquil Diniwid Beach. Boracay is the perfect destination for those who want to mix relaxation with adventure and fun. People spend their days lounging in the sun and indulge in delicious local food, or taking part in water activities. Boracay caters for everyone, with its warm, welcoming atmosphere, whether you’re looking to party at sunset or relax by the water in peace, you have a place to enjoy this beautiful place.</p>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-2">
+            <div class="overlay"></div>
+            <div class="pop-content">
+                <div class="close-btn" onclick="togglePopup(2)">&times;</div>
+                <h1> VARRAKU, MALDIVES</h1>
+                <p> Varraku in the Maldives is a secluded paradise, offering powdery white sand and crystal-clear turquoise waters. It’s a top destination for nature enthusiasts, with vibrant coral reefs just beneath the surface, making it perfect for snorkeling and diving. The beach provides a peaceful, serene atmosphere where you can escape the stresses of everyday life. Whether you're lounging on the beach, soaking up the sun, or exploring the underwater world with exotic fish, the natural beauty and tranquility of Varraku create the ideal setting for relaxation. If you're looking for a remote and unspoiled island getaway, Varraku is the perfect place to disconnect and recharge, offering a truly unforgettable experience. </p>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-3">
+            <div class="overlay"></div>
+            <div class="pop-content">
+                <div class="close-btn" onclick="togglePopup(3)">&times;</div>
+                <h1>PANTAI MERAH, INDONESIA</h1>
+                <p> Pantai Merah, or Red Beach, is one of Indonesia’s most stunning and lesser-known beaches. With its unique reddish sand, created by a mix of volcanic soil and coral, it’s unlike any beach you’ve ever seen. Set in the peaceful, remote East Nusa Tenggara region, this beach offers the perfect blend of tranquility and natural beauty. The calm, clear waters invite you to swim, snorkel, or simply relax and enjoy the stunning surroundings. The vibrant coral and diverse marine life make it an incredible place for underwater exploration. Pantai Merah is not crowded, making it a perfect escape if you want to disconnect from the world. Bring your own food and water, as this hidden gem doesn't have the usual beachside amenities, but the reward is a completely unspoiled, peaceful experience in nature. </p>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-4">
+            <div class="overlay"></div>
+            <div class="pop-content">
+                <div class="close-btn" onclick="togglePopup(4)">&times;</div>
+                <h1> WHITEHAVEN, AUSTRALIA </h1>
+                <p> Whitehaven Beach is not just any beach, it’s a slice of paradise that seems almost unreal. With its powder-soft silica sand stretching for 7 kilometers, Whitehaven is often hailed as one of the most beautiful beaches in the world. The brilliant white sand contrasts beautifully with the sparkling blue waters, making it a perfect spot for swimming, sunbathing, or simply soaking in the breathtaking scenery. The highlight is the stunning Hill Inlet lookout, where you can enjoy a panoramic view of the swirling sandbars and crystal-clear waters—a photographer’s dream. Whether you're unwinding on the beach, exploring the surrounding nature, or just staring out at the endless horizon, Whitehaven offers a peaceful, natural beauty that stays with you long after you leave.</p>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-5">
+            <div class="overlay"></div>
+            <div class="pop-content">
+                <div class="close-btn" onclick="togglePopup(5)">&times;</div>
+                <h1> WAIKIKI BEACH, HAWAII</h1>
+                <p> Waikiki Beach is the iconic heart of Oahu, and it’s easy to see why it’s one of the most famous beaches in the world. With its soft golden sand, warm clear water, and consistent surf, Waikiki has something for everyone—whether you’re a beginner surfer or just want to lay back and watch the waves. The area around the beach is just as vibrant, with plenty of restaurants, bars, shops, and attractions to explore. Waikiki offers both excitement and relaxation in equal measure, with surfing lessons, boat tours, and hiking just minutes away. Early mornings on the beach are peaceful and serene, while afternoons bring in the energy of local events and beachgoers. Whether you’re here for the surfing, the stunning views, or the laid-back Hawaiian vibe, Waikiki is the place where paradise meets adventure.</p>
+            </div>
+        </div>
+    </section>
+
+<!----------------------------------------------------------------> 
+<!-- JAVASCRIPT--> 
+        <section>
+        <script scr = "javarice.js">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+
+        <script scr="javarice.js">
+            let next = document.querySelector('.next')
+            let prev= document.querySelector('.prev')
+
+                next.addEventListener('click', function(){
+                    let items = document.querySelectorAll('.item')
+                    document.querySelector('.slide').appendChild(items[0])
+            })
+            prev.addEventListener('click', function(){
+                let items = document.querySelectorAll('.item')
+                document.querySelector('.slide').prepend(items[items.length - 1])               
+})
+        </script>
+        <script scr="js.js">
+            function togglePopup(popupNumber) {
+                const popup = document.getElementById("popup-" + popupNumber);
+                popup.classList.toggle("active");
+            }
+        </script>
+        
+    </section>
+    </body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="js.js" type="text/Javascript">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewpoint" content="width-device-width", initial-scale="1.0">
+    <link rel="stylesheet" href="abt_styles.css"> 
+    <head>
+        <title> Travel Blog Website </title>
+    </head>
+
+    <body>
+<!----------------------------------------------------------------> 
+<!-- HEADER CONTENT--> 
+        <header>
+            <a href="index.html" class="logo"> INTELLI<span>WAVES</span></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </header>
+
+<!----------------------------------------------------------------> 
+<!-- MAIN CONTENT--> 
+        <section class = "about_main">
+            <div class="container">
+                <div class="about">
+                    <div class="about-content">
+                        <h1> ABOUT US </h1>
+                        <p> All aboard! Welcome to IntelliWaves, your trusted and ultimate guide to the world's magnificent and stunning international beach resort locations! IntelliWaves is composed of dedicated and passionate experts and explorers who aims in providing meaningful insights and detailed information about international beach locations that travelers are curious or want to travel to! Got a place in mind? We got you! We offer various locations, whether you're looking for serene coastal retreats, thrilling surf spots, or the best hidden gems, IntelliWaves offers you valuable knowledge to get your moneys worth an you vacation more memorable!
+                        </p>
+                        <h1>MISSION AND VISION </h1>
+                        <p> IntelliWaves' objective is to help travelers make informed decisions for their next journey by offering reliable, comprehensive information about beach spots across the globe. We aim to ensure that every traveler has the knowledge they need for a relaxed and memorable.
+                        <p> IntelliWaves' goal is to become the most trusted beach travel platform that provides tourists with quick access to useful information on the most stunning international beach locations. Our goals are to encourage travel, and provide people with the resources they require to have safe, memorable beach experiences.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-author">
+                    <div class="author_content">
+                        <h1>ABOUT THE AUTHOR</h1>
+                        <img src="author.JPG" alt="Dicen" width = "200px" class = "the_author">
+                        <p> Elyzza Dicen is an aspiring traveler with a deep love for water, whether it’s vast oceans or peaceful beach resorts. Though she hasn't yet visited many of her dream destinations, she’s passionate about sharing the beautiful beach spots that inspire her, hoping to one day experience them firsthand and inspire others along the way.</p>
+                        <p>    </p>
+                        <p>    </p>
+                        <a href="#divOne" class="con-button"> Contact Us </a>
+                    </div>
+<!----------------------------------------------------------------> 
+                <!-- POP UP CONTACTS CONTENT--> 
+                    <div class="con_overlay" id="divOne">
+                        <div class="wrapper">
+                            <h2> Kindly Fill Out all inputs</h2>
+                            <a href="#" class="close">&times;</a>
+                            <div class="con_content">
+                                <div class="con_container">
+                                    <form>
+                                        <label> Name </label>
+                                        <input type="text" placeholder="Full Name" required>
+                                        <label> Email Address </label>
+                                        <input type="email" placeholder="Email" required>
+                                        <label> Message </label>
+                                        <textarea placeholder="Enter your message here..." required></textarea>
+                                        <input type ="submit" value="Submit">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+        
+                </div>
+            </div>
+        </section>
+
+<!----------------------------------------------------------------> 
+<!-- FOOTER CONTENT--> 
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; IntelliWaves. For educational purposes only.</p>
+                <div class="social-links">
+                    <a href="#"  class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"  class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"  class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+        
+
+<!----------------------------------------------------------------> 
+<!-- JAVASCRIPT CONTENT--> 
+        <section class="banner">
+        <script>
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0);
+            })
+        </script>
+        </section>
+    </body>
